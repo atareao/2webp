@@ -1,0 +1,5 @@
+src/2webp.py /opt/extras.ubuntu.com/2webp/bin
+src/comun.py /opt/extras.ubuntu.com/2webp/bin
+data/2webp.png /opt/extras.ubuntu.com/2webp/share/icons
+data/background.svg /opt/extras.ubuntu.com/2webp/share/pixmaps
+data/extras-2webp.desktop /usr/share/applications

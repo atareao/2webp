@@ -1,0 +1,16 @@
+Source: 2webp
+Section: utils
+Priority: extra
+Maintainer: Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
+Homepage: http://www.atareao.es
+
+Package: 2webp
+Architecture: all
+Depends: ${misc:Depends}, 
+	webp,
+	imagemagick	
+Description: An application to conver to webp format
+ 2webp is a simple application that is able to convert
+ from png, jpg y tiff to webp format with a quallity of 80

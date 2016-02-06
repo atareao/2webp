@@ -1,0 +1,19 @@
+2wepb
+=====
+
+2webp is a simple application to convert images to webp format
+
+Download
+--------
+
+Download the [package][dlp] *or* checkout the source:
+
+    $ git clone https://github.com/atareao/2webp
+
+
+Installation
+------------
+
+    $ sudo add-apt-repositoy ppa:atareao/atareao
+    $ sudo apt-get update
+    $ sudo apt-get install 2webp

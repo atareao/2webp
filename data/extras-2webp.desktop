@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name = 2webp
+GenericName = 2webp
+Comment = An application to convert images to webp formaat
+Exec = /opt/extras.ubuntu.com/2webp/bin/2webp.py
+Icon = /opt/extras.ubuntu.com/2webp/share/icons/2webp.png
+Type = Application
+Terminal = false
+StartupNotify = true
+Encoding = UTF-8
+Categories = Utility;
+X-Ubuntu-Gettext-Domain = 2webp
+MimeType = image/png;image/jpeg;image/tiff;
+
