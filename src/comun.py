@@ -21,21 +21,23 @@
 #
 #
 #
+import os
+import locale
+import gettext
+import sys
+
 __author__ = 'Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>'
-__date__ ='$07/01/2012'
+__date__ = '$07/01/2012'
 __copyright__ = 'Copyright (c) 2011 Lorenzo Carbonell'
 __license__ = 'GPLV3'
 __url__ = 'http://www.atareao.es'
 __version__ = '0.0.1.0'
 
-import os
-import locale
-import gettext
-
 ######################################
 
+
 def is_package():
-	return __file__.find('src') < 0
+    return __file__.find('src') < 0
 
 ######################################
 
@@ -44,35 +46,35 @@ VERSION = __version__
 APP = '2webp'
 APPNAME = '2webp'
 APP_CONF = APP + '.conf'
-CONFIG_DIR = os.path.join(os.path.expanduser('~'),'.config')
+CONFIG_DIR = os.path.join(os.path.expanduser('~'), '.config')
 CONFIG_APP_DIR = os.path.join(CONFIG_DIR, APP)
 # check if running from source
 if is_package():
-	ROOTDIR = '/opt/extras.ubuntu.com/2webp'
-	APPDIR = os.path.join(ROOTDIR, 'share/2webp')
-	LANGDIR = os.path.join(ROOTDIR, 'locale-langpack')
-	BINDIR = os.path.join(ROOTDIR, 'bin')
-	ICONDIR = os.path.join(ROOTDIR, 'share/icons')
-	PIXMAPDIR = os.path.join(ROOTDIR, 'share/pixmaps')
+    ROOTDIR = '/opt/extras.ubuntu.com/2webp'
+    APPDIR = os.path.join(ROOTDIR, 'share/2webp')
+    LANGDIR = os.path.join(ROOTDIR, 'locale-langpack')
+    BINDIR = os.path.join(ROOTDIR, 'bin')
+    ICONDIR = os.path.join(ROOTDIR, 'share/icons')
+    PIXMAPDIR = os.path.join(ROOTDIR, 'share/pixmaps')
 else:
-	VERSION = VERSION + '-src'
-	ROOTDIR = os.path.dirname(__file__)
-	LANGDIR = os.path.normpath(os.path.join(ROOTDIR, '../template1'))
-	APPDIR = ROOTDIR
-	ICONDIR = os.path.normpath(os.path.join(ROOTDIR, '../data'))
-	PIXMAPDIR = ICONDIR
+    VERSION = VERSION + '-src'
+    ROOTDIR = os.path.dirname(__file__)
+    LANGDIR = os.path.normpath(os.path.join(ROOTDIR, '../template1'))
+    APPDIR = ROOTDIR
+    ICONDIR = os.path.normpath(os.path.join(ROOTDIR, '../data'))
+    PIXMAPDIR = ICONDIR
 #
-ICON = os.path.join(ICONDIR,'2webp.png')
-BACKGROUND = os.path.join(PIXMAPDIR,'background.svg')
+ICON = os.path.join(ICONDIR, '2webp.png')
+BACKGROUND = os.path.join(PIXMAPDIR, 'background.svg')
 
 try:
-	current_locale, encoding = locale.getdefaultlocale()
-	language = gettext.translation(APP, LANGDIR, [current_locale])
-	language.install()
-	if sys.version_info[0] == 3:
-		_ = language.gettext
-	else:
-		_ = language.ugettext
+    current_locale, encoding = locale.getdefaultlocale()
+    language = gettext.translation(APP, LANGDIR, [current_locale])
+    language.install()
+    if sys.version_info[0] == 3:
+        _ = language.gettext
+    else:
+        _ = language.ugettext
 except Exception as e:
-	print(e)
-	_ = str
+    print(e)
+    _ = str
