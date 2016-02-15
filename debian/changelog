@@ -1,3 +1,9 @@
+2webp (0.0.1-0extras15.10.0) wily; urgency=medium
+
+  * reorder folders
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Mon, 15 Feb 2016 20:17:22 +0100
+
 2webp (0.0.1-0extras15.04.4) vivid; urgency=medium
 
   * Initial release.
